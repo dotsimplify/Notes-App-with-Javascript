@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./stylesheet/tailwind.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <script defer src="main.js"></script>
+    <title>Notes App</title>
+  </head>
+  <body class="bg-gray-200">
+    <div class="navbar w-full flex bg-gray-700 p-2">
+      <a href="/" class="p-4">
+        <span class="font-bold cursor-pointer text-3xl text-blue-300 m-auto"
+          ><i class="bx bxs-quote-left text-white m-2"></i>My Notes APP<i
+            class="bx bxs-quote-right text-white m-2"
+          ></i></span
+      ></a>
+      <input
+        id="search"
+        type="text"
+        class="m-auto font-semibold tracking-wider text-lg text-gray-600 placeholder-gray-400 focus:placeholder-gray-300 p-2 focus:border-blue-500 focus:outline-none h-8 w-96 border-2 border-gray-300 rounded-md"
+        placeholder="Search Notes by typing text here"
+        value=""
+      />
+    </div>
+    <div id="addNoteDiv" class="flex mt-8">
+      <div class="m-auto">
+        <button
+          id="createNoteButton"
+          class="text-2xl focus:outline-none font-semibold text-green-800"
+        >
+          <i class="bx bx-highlight text-4xl text-pink-400 m-2"></i> Click to
+          add note
+        </button>
+      </div>
+    </div>
+    <div id="noteBox" class="hidden w-full flex mt-8">
+      <div class="m-auto">
+        <div class="a">
+          <label
+            for="title"
+            class="block text-xl text-gray-600 mb-2 font-semibold"
+            >Note Title</label
+          >
+          <input
+            id="input"
+            type="text"
+            class="mb-2 mt-2 font-semibold tracking-wider text-lg text-gray-600 placeholder-gray-400 focus:placeholder-gray-300 p-2 focus:border-blue-500 focus:outline-none h-12 w-96 border-2 border-gray-300 rounded-md"
+            placeholder="Enter title text"
+            value=""
+          />
+          <span id="inputCheck" class="hidden block text-xl text-red-400"
+            ><i class="bx bxs-message-square-error m-1 text-2xl"></i>Note title
+            is required</span
+          >
+        </div>
+        <div class="b">
+          <label
+            for="title"
+            class="block text-xl text-gray-500 mb-2 font-semibold"
+            >Note body</label
+          >
+          <textarea
+            id="textarea"
+            placeholder="Write your note here"
+            name="noteText"
+            class="border-2 h-48 w-full resize-none text-lg text-gray-600 font-semibold focus:outline-none focus:border-blue-500 p-2 border-gray-300 rounded-md m-auto"
+            id="noteText"
+            value=""
+          ></textarea>
+          <span id="textCheck" class="hidden block text-xl text-red-400"
+            ><i class="bx bxs-message-square-error m-1 text-2xl"></i>Body is
+            required</span
+          >
+        </div>
+        <div class="m-auto">
+          <button
+            id="submit"
+            class="p-2 focus:outline-none bg-gray-600 hover:font-bold text-2xl border-2 border-gray-600 text-white hover:bg-indigo-800 hover:border-2 font-bold hover:border-indigo-800 rounded-md m-2 ml-0"
+          >
+            Save Note
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      id="grid"
+      class="grid grid-flow-row lg:grid-flow-col grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 m-12"
+    ></div>
+    <div class="p-8 flex bg-white h-32">
+      <h3 class="text-2xl m-auto text-blue-700 font-semibold">
+        Created by
+        <a
+          target="_blank"
+          class="text-red-500 hover:underline mr-2"
+          href="http://dotsimplify.com"
+          >Dot SIMPLIFY</a
+        >
+        <span
+          title="Check Github for more projects"
+          class="m-2 text-xl m-auto text-gray-800"
+        >
+          <i class="bx bxl-github text-3xl bx-tada-hover"></i>
+        </span>
+      </h3>
+    </div>
+  </body>
+</html>
